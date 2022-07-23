@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HPlus.Ecommerce.Filter;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +10,7 @@ namespace HPlus.Ecommerce.Controllers
     public class ProductController : Controller
     {
         // GET: Product
+        [CrawlerFilter]
         public ActionResult Index()
         {
             return View();
