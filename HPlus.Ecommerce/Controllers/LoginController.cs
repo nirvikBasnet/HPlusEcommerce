@@ -17,13 +17,14 @@ namespace HPlus.Ecommerce.Controllers
         [HttpPost]
         public ActionResult Index(string username, string password)
         {
-            if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
+            if(!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
             {
-                FormsAuthentication.SetAuthCookie(username, false);
+                FormsAuthentication.SetAuthCookie(username, false); //nirvik, false -> cookie will expire if the user closes the browser
+
                 return Redirect(FormsAuthentication.GetRedirectUrl(username, false));
             }
-
             return View();
         }
+
     }
 }

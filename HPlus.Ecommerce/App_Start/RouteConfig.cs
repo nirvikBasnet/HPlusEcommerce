@@ -9,6 +9,12 @@ namespace HPlus.Ecommerce
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //to use attributes for routing      
+
+            routes.MapMvcAttributeRoutes();
+
+
+            //if we only want attribute routing need to remove below
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

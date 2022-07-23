@@ -6,13 +6,12 @@ using System.Web.Mvc;
 
 namespace HPlus.Ecommerce.Controllers
 {
-    [Authorize]
-    public class AccountController : Controller
+    public class ProductsController : Controller
     {
+        // GET: Products
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index","Product");
         }
-
     }
 }
